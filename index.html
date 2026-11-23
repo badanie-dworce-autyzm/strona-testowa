@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- WERSJA TESTOWA: nie indeksować w wyszukiwarkach -->
+<meta name="robots" content="noindex, nofollow">
+
+<!-- Blokada techniczna: przeglądarka nie wyśle z tej strony żadnego zapytania
+     poza własną domenę. Jeśli kiedyś dodasz skrypt albo zewnętrzny zasób,
+     trzeba będzie tę regułę rozszerzyć. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+
+<title>Dworce bez barier – badanie dostępności dworców dla osób w spektrum autyzmu</title>
+<meta name="description" content="Sprawdzamy, co na dworcach ułatwia, a co utrudnia podróż osobom w spektrum autyzmu. Trwa anonimowa ankieta dla osób w spektrum, rodziców i opiekunów.">
+<link rel="canonical" href="https://dworcebezbarier.pl/">
+<meta name="theme-color" content="#1A3A52">
+<meta name="color-scheme" content="light">
+
+<!-- Open Graph (LinkedIn, Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="Dworce bez barier">
+<meta property="og:url" content="https://dworcebezbarier.pl/">
+<meta property="og:title" content="Dworce bez barier – dworzec z perspektywy osób w spektrum autyzmu">
+<meta property="og:description" content="Projekt badawczy na stacji Warszawa Zachodnia. Trwa anonimowa ankieta dla osób w spektrum autyzmu, rodziców i opiekunów.">
+<!-- LinkedIn nie wyświetla SVG, dlatego og:image wskazuje PNG (wyrenderowany z og-image.svg). -->
+<meta property="og:image" content="https://dworcebezbarier.pl/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dworce bez barier. Dworzec z perspektywy osób w spektrum autyzmu. Obok uproszczony plan trasy od wejścia na peron.">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dworce bez barier – dworzec z perspektywy osób w spektrum autyzmu">
+<meta name="twitter:description" content="Projekt badawczy na stacji Warszawa Zachodnia. Trwa anonimowa ankieta dla osób w spektrum autyzmu, rodziców i opiekunów.">
+<meta name="twitter:image" content="https://dworcebezbarier.pl/og-image.png">
+<meta name="twitter:image:alt" content="Dworce bez barier. Dworzec z perspektywy osób w spektrum autyzmu. Obok uproszczony plan trasy od wejścia na peron.">
+
+<!-- Favicon: SVG wpisany w kod, bez osobnego pliku -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231A3A52'/%3E%3Cpath d='M9 6v8a4 4 0 0 0 4 4h9' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='23' cy='18' r='3.5' fill='%23fff'/%3E%3Crect x='5' y='25' width='22' height='3' rx='1' fill='%23EBC44F'/%3E%3C/svg%3E">
+
+<!-- Kroje pisma: pliki obok strony (Fontsource, licencja OFL) -->
+
+<style>
+/* ==========================================================================
+   1. Kroje pisma (licencja OFL, pliki lokalne)
+   ========================================================================== */
+@font-face {
+  font-family: "Archivo";
+  src: url("archivo-latin-wdth-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("archivo-latin-ext-wdth-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("atkinson-hyperlegible-next-latin-wght-normal.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("atkinson-hyperlegible-next-latin-ext-wght-normal.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+/* ==========================================================================
+   2. Zmienne: kolory i typografia
+   ========================================================================== */
+:root {
+  color-scheme: light;
+
+  --papier: #EEF2F3;         /* tło strony: chłodna, lekko przygaszona biel */
+  --peron: #DDE6E7;          /* tło co drugiej sekcji */
+  --biel: #FAFCFC;           /* panele i wnętrza na planie */
+  --atrament: #14222D;       /* tekst i linie */
+  --granat: #1A3A52;         /* tablica z nazwą i stopka */
+  --morski: #0A5362;         /* linki, znak bariery sensorycznej */
+  --sliwka: #6B3F5E;         /* znak bariery informacyjnej */
+  --zolty: #EBC44F;          /* „tu i teraz”: przycisk ankiety, bieżący etap */
+  --zolty-ciemny: #DDB237;   /* przycisk pod kursorem */
+  --szary: #43525C;          /* tekst pomocniczy */
+  --szyna: #73838D;          /* tory na planie */
+
+  --f-naglowek: "Archivo", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --f-tekst: "Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI",
+             Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ==========================================================================
+   3. Podstawy
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  margin: 0;
+  background: var(--papier);
+  color: var(--atrament);
+  font-family: var(--f-tekst);
+  font-size: 1.125rem;          /* 18 px: najmniejszy tekst na stronie */
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: var(--f-naglowek);
+  font-stretch: 110%;
+  font-weight: 700;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+p, ul, ol, dl, dd, figure { margin: 0; }
+
+/* Tekst zawsze wyrównany do lewej, bez justowania i bez automatycznego
+   dzielenia wyrazów: równe odstępy między słowami łatwiej się czyta
+   (WCAG 1.4.8). Ostatnia linia akapitu bez pojedynczego słowa. */
+p, li, dd, dt, figcaption { text-wrap: pretty; }
+body { text-align: left; hyphens: manual; }
+
+a {
+  color: var(--morski);
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.2em;
+}
+a:hover {
+  color: var(--atrament);
+  text-decoration-thickness: 0.17em;
+}
+
+/* Wyraźny focus dla klawiatury */
+:focus-visible {
+  outline: 3px solid var(--atrament);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+strong { font-weight: 700; }
+
+/* Szerokość strony i marginesy boczne */
+.wrap {
+  width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 40em) { .wrap { padding-inline: 1.75rem; } }
+@media (min-width: 60em) {
+  .wrap { padding-inline: 2.5rem; }
+  body { font-size: 1.1875rem; }
+}
+
+/* Długość linii: do około 65 znaków */
+.miara { max-width: 28em; }
+
+/* Odstępy między akapitami */
+.tekst > * + * { margin-top: 1rem; }
+
+/* Link „Przejdź do treści”: widoczny dopiero po Tab */
+.pomin {
+  position: absolute;
+  left: 1rem;
+  top: -10rem;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  background: var(--biel);
+  border: 3px solid var(--atrament);
+  border-radius: 0.5rem;
+  color: var(--atrament);
+  font-weight: 700;
+}
+.pomin:focus { top: 1rem; }
+
+/* Fragment, którego nie wolno dzielić między linie */
+.razem { white-space: nowrap; }
+
+/* Miejsca do uzupełnienia: celowo widoczne */
+.todo {
+  padding: 0.05em 0.35em;
+  background: var(--zolty);
+  border: 2px dashed var(--atrament);
+  border-radius: 0.3rem;
+  color: var(--atrament);
+  font-weight: 600;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Znaki barier (koło, kwadrat, trójkąt) */
+.znaki-wzorce { position: absolute; }
+.znak {
+  flex: none;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* Przyciski */
+.przycisk {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  padding: 0.7rem 1.5rem;
+  background: var(--zolty);
+  border: 3px solid var(--atrament);
+  border-radius: 0.5rem;
+  color: var(--atrament);
+  font-family: var(--f-naglowek);
+  font-stretch: 108%;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+.przycisk:hover {
+  background: var(--zolty-ciemny);
+  color: var(--atrament);
+  text-decoration: underline;
+  text-decoration-thickness: 0.12em;
+}
+.przycisk--drugi { background: transparent; }
+.przycisk--drugi:hover { background: var(--biel); }
+
+/* Samodzielny link (nie w zdaniu): cel dotyku 44 px */
+.link-wiersz {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   4. Nagłówek strony
+   ========================================================================== */
+.naglowek__uklad {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding-block: 1rem;
+}
+
+/* Nazwa projektu jak tablica z nazwą stacji */
+.tablica {
+  display: inline-block;
+  padding: 0.7rem 1.05rem;
+  background: var(--granat);
+  border-radius: 0.45rem;
+  box-shadow: inset 0 0 0 3px var(--granat), inset 0 0 0 5px #fff;
+  color: #fff;
+  font-family: var(--f-naglowek);
+  font-stretch: 122%;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.nawigacja ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.25rem;
+  margin: 0 -0.625rem;
+  padding: 0;
+  list-style: none;
+}
+.nawigacja a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 0.625rem;
+  color: var(--atrament);
+  font-weight: 600;
+  text-decoration: none;
+}
+.nawigacja a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.14em;
+}
+.nawigacja__szeroka { display: none; }
+@media (max-width: 23.99em) {
+  .nawigacja ul { margin: 0 -0.5rem; gap: 0; }
+  .nawigacja a { padding: 0 0.5rem; }
+}
+@media (min-width: 48em) {
+  .nawigacja__szeroka { display: list-item; }
+}
+
+/* ==========================================================================
+   5. Otwarcie
+   ========================================================================== */
+.otwarcie { padding-block: 1.5rem 3.5rem; }
+
+.otwarcie__uklad {
+  display: grid;
+  gap: 2.75rem;
+}
+
+.otwarcie h1 {
+  font-size: clamp(1.75rem, 0.9rem + 3.8vw, 3.5rem);
+  line-height: 1.08;
+  text-wrap: pretty;
+  letter-spacing: -0.012em;
+}
+
+.otwarcie__wstep {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.otwarcie__zaproszenie {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.otwarcie__akcje {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.otwarcie__uwaga {
+  margin-top: 1rem;
+  color: var(--szary);
+}
+
+/* Plan trasy */
+.plan { max-width: 30rem; }
+.plan > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.plan text {
+  font-family: var(--f-tekst);
+  font-size: 31px;             /* na ekranie 360 px daje to 18 px */
+  font-weight: 600;
+  fill: var(--atrament);
+}
+.plan figcaption { margin-top: 1.25rem; }
+
+.legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+.legenda li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.plan__podpis {
+  margin-top: 0.75rem;
+  color: var(--szary);
+}
+
+@media (min-width: 60em) {
+  .otwarcie { padding-block: 3rem 5.5rem; }
+  .otwarcie__uklad {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: 4rem;
+    align-items: start;
+  }
+  .otwarcie__wstep { font-size: 1.375rem; }
+  .otwarcie h1 { max-width: 14em; }
+  .plan text { font-size: 25px; }
+}
+
+/* ==========================================================================
+   6. Sekcje: wspólny układ
+   ========================================================================== */
+.sekcja { padding-block: 3.5rem; }
+.sekcja--peron { background: var(--peron); }
+
+.sekcja h2 {
+  font-size: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+  letter-spacing: -0.01em;
+}
+
+.sekcja h3 {
+  font-size: 1.3125rem;
+  font-stretch: 106%;
+  line-height: 1.25;
+}
+
+/* Tytuł po lewej, treść po prawej (od 960 px) */
+.uklad {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 60em) {
+  .sekcja { padding-block: 5.5rem; }
+  .sekcja h3 { font-size: 1.4375rem; }
+  .uklad {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: 4rem;
+  }
+}
+
+/* ==========================================================================
+   7. Cel badania: trzy obszary
+   ========================================================================== */
+.bariery {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.bariera {
+  padding-top: 1.25rem;
+  border-top: 3px solid var(--atrament);
+}
+.bariera h4 {
+  font-family: var(--f-naglowek);
+  font-stretch: 106%;
+  font-size: 1.3125rem;
+  line-height: 1.25;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.bariera ul, .bariera p { margin-top: 0.75rem; }
+.bariera ul { padding-left: 1.2em; }
+.obszary__tytul { margin-top: 3rem; }
+.bariera li + li { margin-top: 0.35rem; }
+.bariery__uwaga {
+  margin-top: 2rem;
+  color: var(--szary);
+}
+
+@media (min-width: 48em) {
+  .bariery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+/* ==========================================================================
+   8. Etapy badania: schemat linii z pięcioma przystankami
+   ========================================================================== */
+.etapy {
+  margin-top: 2.5rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: etap;
+}
+.etap {
+  position: relative;
+  padding: 0 0 2.5rem 4rem;
+  counter-increment: etap;
+}
+.etap:last-child { padding-bottom: 0; }
+
+/* Przystanek z numerem etapu */
+.etap::before {
+  content: counter(etap);
+  position: absolute;
+  left: 0;
+  top: -0.35rem;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: var(--peron);
+  border: 3px solid var(--atrament);
+  border-radius: 50%;
+  font-family: var(--f-naglowek);
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1;
+}
+/* Odcinek linii do następnego przystanku */
+.etap::after {
+  content: "";
+  position: absolute;
+  left: calc(1.375rem - 2px);
+  top: 2.4rem;
+  bottom: -0.35rem;
+  width: 4px;
+  background: var(--atrament);
+}
+.etap:last-child::after { display: none; }
+
+/* Bieżący etap */
+.etap--teraz::before { background: var(--zolty); }
+
+.etap__status {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.1rem 0.65rem;
+  background: var(--zolty);
+  border: 2px solid var(--atrament);
+  border-radius: 0.35rem;
+  font-weight: 700;
+}
+
+.etap__opis { margin-top: 0.6rem; }
+.etap__opis > * + * { margin-top: 0.5rem; }
+
+@media (min-width: 48em) {
+  .etap {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 2.5rem;
+    padding-left: 4.5rem;
+  }
+  .etap__opis { margin-top: 0; }
+}
+
+/* ==========================================================================
+   9. Ankieta: jeden panel z żółtą krawędzią peronu
+   ========================================================================== */
+.ankieta__panel {
+  overflow: hidden;
+  background: var(--biel);
+  border: 3px solid var(--atrament);
+  border-radius: 0.75rem;
+}
+.ankieta__krawedz {
+  height: 0.875rem;
+  background: var(--zolty);
+  border-bottom: 3px solid var(--atrament);
+}
+.ankieta__srodek {
+  display: grid;
+  gap: 2rem;
+  padding: 1.75rem 1.125rem 2rem;
+}
+.ankieta__wstep { margin-top: 1.25rem; }
+.ankieta__akcja { margin-top: 1.75rem; }
+.ankieta__uwaga {
+  margin-top: 1rem;
+  color: var(--szary);
+}
+
+/* Fakty o ankiecie: wiersze jak w rozkładzie */
+.fakty > div {
+  padding-block: 1rem;
+  border-top: 2px solid var(--atrament);
+}
+.fakty > div:last-child { border-bottom: 2px solid var(--atrament); }
+.fakty dt {
+  font-family: var(--f-naglowek);
+  font-stretch: 106%;
+  font-weight: 700;
+}
+.fakty dd { margin-top: 0.25rem; }
+.fakty ul { padding-left: 1.2em; }
+.fakty__dopisek { margin-top: 0.5rem; }
+
+@media (min-width: 40em) {
+  .ankieta__srodek { padding: 2.25rem 2rem 2.5rem; }
+  .fakty > div {
+    display: grid;
+    grid-template-columns: 10.5rem minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+  .fakty dd { margin-top: 0; }
+}
+@media (min-width: 60em) {
+  .ankieta__srodek {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 4rem;
+    padding: 3rem;
+  }
+}
+
+/* ==========================================================================
+   10. O autorce
+   ========================================================================== */
+.zdjecie {
+  display: grid;
+  place-content: center;
+  gap: 0.5rem;
+  max-width: 21rem;
+  aspect-ratio: 4 / 5;
+  padding: 1.25rem;
+  background: var(--peron);
+  border: 3px dashed var(--szary);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+/* Po dodaniu zdjęcia: <img class="zdjecie__foto" …> */
+.zdjecie__foto {
+  display: block;
+  width: 100%;
+  max-width: 21rem;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 3px solid var(--atrament);
+  border-radius: 0.5rem;
+}
+
+.autorka__uklad {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.autorka__bio { margin-top: 1rem; }
+.autorka__akcja { margin-top: 1.75rem; }
+
+@media (min-width: 48em) {
+  .autorka__uklad {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: 4rem;
+    align-items: start;
+  }
+}
+
+/* ==========================================================================
+   11. Dla branży, kontakt
+   ========================================================================== */
+.branza__akcja { margin-top: 1.75rem; }
+
+/* Adres ankiety do skopiowania: jedno dotknięcie zaznacza cały adres */
+.kopiuj {
+  margin-top: 1.75rem;
+  max-width: 34rem;
+}
+.kopiuj__etykieta {
+  display: block;
+  font-weight: 700;
+}
+.kopiuj__adres {
+  display: block;
+  margin-top: 0.4rem;
+  padding: 0.75rem 1rem;
+  background: var(--biel);
+  border: 2px solid var(--atrament);
+  border-radius: 0.5rem;
+  overflow-wrap: anywhere;
+  -webkit-user-select: all;
+  user-select: all;
+}
+
+.kontakt__adres {
+  font-family: var(--f-naglowek);
+  font-stretch: 104%;
+  font-size: clamp(1.1875rem, 0.95rem + 1.1vw, 1.625rem);
+  font-weight: 700;
+}
+.kontakt__adres a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--atrament);
+}
+
+/* ==========================================================================
+   12. Stopka
+   ========================================================================== */
+.stopka {
+  padding-block: 3rem;
+  background: var(--granat);
+  color: #fff;
+}
+.stopka a { color: #fff; }
+.stopka a:hover { color: #fff; }
+.stopka :focus-visible { outline-color: var(--zolty); }
+
+.tablica--jasna {
+  background: var(--papier);
+  box-shadow: inset 0 0 0 3px var(--papier), inset 0 0 0 5px var(--granat);
+  color: var(--granat);
+}
+.stopka__tekst { margin-top: 1.5rem; }
+.stopka__logo { margin-top: 1.5rem; }
+
+.stopka__uklad {
+  display: grid;
+  gap: 2.5rem;
+}
+.stopka__nawigacja ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.stopka__nawigacja li + li { margin-top: 0.25rem; }
+.stopka__nawigacja .stopka__gora { margin-top: 1rem; }
+
+@media (min-width: 48em) {
+  .stopka__uklad {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+    gap: 4rem;
+  }
+  .stopka__nawigacja {
+    padding-left: 2rem;
+    border-left: 2px solid rgba(255, 255, 255, 0.35);
+  }
+}
+
+/* ==========================================================================
+   13. Ruch i tryby specjalne
+   ========================================================================== */
+/* Jedyny ruch na stronie: łagodna zmiana koloru po najechaniu kursorem.
+   Wyłączona, gdy użytkownik prosi o ograniczenie ruchu. */
+@media (prefers-reduced-motion: no-preference) {
+  a, .przycisk {
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+}
+
+/* Tryb wymuszonych kolorów (Windows): zachowaj obrysy */
+@media (forced-colors: active) {
+  .tablica, .etap__status, .todo { border: 2px solid CanvasText; }
+  .etap--teraz::before { outline: 3px solid Highlight; outline-offset: 2px; }
+}
+
+@media print {
+  .nawigacja, .pomin, .stopka__gora { display: none; }
+  .sekcja { padding-block: 1.5rem; }
+}
+</style>
+</head>
+
+<body id="gora">
+
+<a class="pomin" href="#tresc">Przejdź do treści</a>
+
+<!-- Wspólne znaki barier: koło, kwadrat, trójkąt (używane przez <use>) -->
+<svg class="znaki-wzorce" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="znak-sensoryczna" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="13" fill="#0A5362"/>
+    </symbol>
+    <symbol id="znak-informacyjna" viewBox="0 0 32 32">
+      <rect x="4" y="4" width="24" height="24" rx="2" fill="#6B3F5E"/>
+    </symbol>
+    <symbol id="znak-przestrzenna" viewBox="0 0 32 32">
+      <path d="M16 4 29 27H3Z" fill="#EBC44F" stroke="#14222D" stroke-width="2.5" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ======================================================================
+     Nagłówek
+     ====================================================================== -->
+<header class="naglowek">
+  <div class="wrap naglowek__uklad">
+    <p class="tablica">Dworce bez barier</p>
+    <nav class="nawigacja" aria-label="Sekcje strony">
+      <!-- Na telefonie cztery pozycje w jednym rzędzie; „Cel badania” i „Dla branży” od 768 px.
+           Wszystkie sekcje są też w stopce. -->
+      <ul>
+        <li class="nawigacja__szeroka"><a href="#cel">Cel badania</a></li>
+        <li><a href="#badanie">Etapy</a></li>
+        <li><a href="#ankieta">Ankieta</a></li>
+        <li><a href="#autorka">Autorka</a></li>
+        <li class="nawigacja__szeroka"><a href="#branza">Dla branży</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="tresc" tabindex="-1">
+
+<!-- ======================================================================
+     1. Otwarcie
+     ====================================================================== -->
+<section class="otwarcie" aria-labelledby="otwarcie-tytul">
+  <div class="wrap otwarcie__uklad">
+
+    <div>
+      <h1 id="otwarcie-tytul">Dworzec z&nbsp;perspektywy osób w&nbsp;spektrum&nbsp;autyzmu</h1>
+      <p class="otwarcie__wstep miara">Sprawdzamy, co na dworcach ułatwia, a&nbsp;co utrudnia podróż osobom w&nbsp;spektrum autyzmu. Pytamy o&nbsp;to w&nbsp;ankiecie, a&nbsp;na stacji Warszawa Zachodnia prowadzimy obserwacje i&nbsp;pomiary.</p>
+      <p class="otwarcie__zaproszenie miara">Ankieta trwa. Zapraszamy dorosłe osoby w&nbsp;spektrum autyzmu oraz rodziców i&nbsp;opiekunów.</p>
+      <div class="otwarcie__akcje">
+        <!-- Adres docelowy ankiety: https://ankieta.dworcebezbarier.pl -->
+        <a class="przycisk" href="https://badanie-dworce-autyzm.github.io/ankieta/?skad=strona&amp;pilot=1">Wypełnij ankietę</a>
+        <a class="link-wiersz" href="#ankieta">Sprawdź, kto może ją wypełnić</a>
+      </div>
+      <p class="otwarcie__uwaga miara">Anonimowo, bez logowania i&nbsp;bez adresu <span class="razem">e-mail</span>.</p>
+    </div>
+
+    <!-- Własna ilustracja: uproszczony plan trasy od wejścia na peron -->
+    <figure class="plan">
+      <svg viewBox="0 0 560 612" role="img" aria-labelledby="plan-tytul plan-opis">
+        <title id="plan-tytul">Schemat trasy od wejścia na peron</title>
+        <desc id="plan-opis">Uproszczony plan dworca widziany z&nbsp;góry. Trasa prowadzi od wejścia przez halę i&nbsp;przejście podziemne na peron. Rysunek jest poglądowy.</desc>
+
+        <!-- przejście podziemne: wypełnienie -->
+        <rect x="248" y="238" width="64" height="310" fill="#DDE6E7"/>
+
+        <!-- tory -->
+        <g stroke="#73838D" stroke-width="3" stroke-linecap="round">
+          <path d="M16 272H544M16 284H544"/>
+          <path d="M16 376H544M16 388H544"/>
+          <path d="M16 410H544M16 422H544"/>
+          <path d="M16 514H544M16 526H544"/>
+        </g>
+
+        <!-- perony z żółtą krawędzią -->
+        <g fill="#FAFCFC" stroke="#14222D" stroke-width="3">
+          <rect x="40" y="302" width="480" height="56" rx="4"/>
+          <rect x="40" y="440" width="480" height="56" rx="4"/>
+        </g>
+        <g fill="#EBC44F">
+          <rect x="45" y="307" width="470" height="7"/>
+          <rect x="45" y="346" width="470" height="7"/>
+          <rect x="45" y="445" width="470" height="7"/>
+          <rect x="45" y="484" width="470" height="7"/>
+        </g>
+
+        <!-- przejście podziemne: ściany (linia przerywana = poziom niżej) -->
+        <path d="M248 240V548H312V240" fill="none" stroke="#14222D" stroke-width="3" stroke-dasharray="10 8"/>
+
+        <!-- hala -->
+        <rect x="40" y="64" width="480" height="174" rx="6" fill="#FAFCFC" stroke="#14222D" stroke-width="3"/>
+        <!-- wejście i zejście do przejścia: przerwy w ścianach -->
+        <path d="M94 64H146" stroke="#EEF2F3" stroke-width="6"/>
+        <path d="M94 56V72M146 56V72" stroke="#14222D" stroke-width="3" stroke-linecap="round"/>
+        <path d="M250 238H310" stroke="#FAFCFC" stroke-width="6"/>
+
+
+        <!-- trasa -->
+        <path d="M120 34V134Q120 150 136 150H264Q280 150 280 166V452Q280 468 296 468H478" fill="none" stroke="#FAFCFC" stroke-width="16" stroke-linecap="round"/>
+        <path d="M120 34V134Q120 150 136 150H264Q280 150 280 166V452Q280 468 296 468H478" fill="none" stroke="#14222D" stroke-width="8" stroke-linecap="round"/>
+        <circle cx="120" cy="34" r="11" fill="#EEF2F3" stroke="#14222D" stroke-width="6"/>
+        <circle cx="478" cy="468" r="13" fill="#14222D" stroke="#FAFCFC" stroke-width="4"/>
+
+
+        <!-- podpisy -->
+        <text x="146" y="45">Wejście</text>
+        <text x="432" y="114">Hala</text>
+        <text x="58" y="479">Peron</text>
+        <text x="280" y="592" text-anchor="middle">Przejście podziemne</text>
+      </svg>
+
+      <!-- Po zamknięciu ankiety: tu wrócą znaki barier z wynikami i legenda (wersja v2). -->
+      <figcaption class="plan__podpis">Badana trasa: od wejścia przez halę i&nbsp;przejście podziemne na peron. Rysunek poglądowy.</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+<!-- ======================================================================
+     2. Cel badania
+     Na czas zbierania odpowiedzi strona NIE wymienia konkretnych bodźców ani barier,
+     żeby nie podpowiadać odpowiedzi w ankiecie. Przykłady, mapa i wnioski – po jej zamknięciu.
+     ====================================================================== -->
+<section class="sekcja" id="cel" aria-labelledby="cel-tytul">
+  <div class="wrap">
+    <div class="uklad">
+      <h2 id="cel-tytul">Po co jest to badanie</h2>
+      <div class="tekst miara">
+        <p>Chcemy poznać doświadczenia osób w&nbsp;spektrum autyzmu na dworcach i&nbsp;stacjach kolejowych: co pomaga w&nbsp;podróży, a&nbsp;co ją utrudnia.</p>
+        <p>Sprawdzamy też, jak potrzeby tych osób uwzględniają unijne przepisy o&nbsp;dostępności kolei, czyli TSI PRM.</p>
+        <p>Na podstawie ankiety i&nbsp;badań na stacji Warszawa Zachodnia powstaną propozycje zmian dla zarządców stacji i&nbsp;przewoźników.</p>
+      </div>
+    </div>
+
+    <h3 class="obszary__tytul">Badanie obejmuje trzy obszary</h3>
+    <div class="bariery">
+      <div class="bariera">
+        <h4><svg class="znak" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#znak-sensoryczna"/></svg>Sensoryczny</h4>
+        <p>To, co w&nbsp;otoczeniu dworca odbieramy zmysłami.</p>
+      </div>
+      <div class="bariera">
+        <h4><svg class="znak" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#znak-informacyjna"/></svg>Informacyjny</h4>
+        <p>To, jak pasażer znajduje drogę i&nbsp;potrzebne informacje.</p>
+      </div>
+      <div class="bariera">
+        <h4><svg class="znak" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#znak-przestrzenna"/></svg>Przestrzenny</h4>
+        <p>Układ dworca: trasy, przejścia i&nbsp;miejsca, w&nbsp;których się przebywa.</p>
+      </div>
+    </div>
+    <p class="bariery__uwaga miara">Wyniki, w&nbsp;tym mapę barier na badanej trasie, opublikujemy po zamknięciu ankiety.</p>
+  </div>
+</section>
+
+<!-- ======================================================================
+     3. Jak prowadzimy badanie (5 etapów, bieżący: ankieta)
+     Po zmianie etapu przenieś klasę „etap--teraz”, atrybut aria-current
+     i akapit „etap__status” do właściwego punktu listy.
+     ====================================================================== -->
+<section class="sekcja sekcja--peron" id="badanie" aria-labelledby="badanie-tytul">
+  <div class="wrap">
+    <h2 id="badanie-tytul">Jak prowadzimy badanie</h2>
+
+    <ol class="etapy" role="list">
+      <li class="etap">
+        <h3>Analiza przepisów i&nbsp;literatury</h3>
+        <div class="etap__opis miara">
+          <p>Sprawdzamy, co o&nbsp;potrzebach osób w&nbsp;spektrum autyzmu mówią przepisy TSI PRM i&nbsp;dotychczasowe badania.</p>
+        </div>
+      </li>
+      <li class="etap etap--teraz" aria-current="step">
+        <div>
+          <h3>Ankieta</h3>
+          <p class="etap__status">Trwa teraz</p>
+        </div>
+        <div class="etap__opis miara">
+          <p>Pytamy dwie grupy: dorosłe osoby w&nbsp;spektrum autyzmu oraz rodziców i&nbsp;opiekunów. Ankietę można wypełnić online.</p>
+          <p><a class="link-wiersz" href="#ankieta">Przejdź do informacji o&nbsp;ankiecie</a></p>
+        </div>
+      </li>
+      <li class="etap">
+        <h3>Badania terenowe</h3>
+        <div class="etap__opis miara">
+          <p>Przechodzimy wybraną trasę na stacji Warszawa Zachodnia. Prowadzimy obserwacje i&nbsp;pomiary warunków na trasie.</p>
+        </div>
+      </li>
+      <li class="etap">
+        <h3>Mapa barier</h3>
+        <div class="etap__opis miara">
+          <p>Nanosimy wyniki ankiety, obserwacji i&nbsp;pomiarów na plan trasy.</p>
+        </div>
+      </li>
+      <li class="etap">
+        <h3>Propozycje usprawnień</h3>
+        <div class="etap__opis miara">
+          <p>Przygotowujemy propozycje zmian dla zarządców stacji i&nbsp;przewoźników.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================================================================
+     4. Ankieta
+     ====================================================================== -->
+<section class="sekcja" id="ankieta" aria-labelledby="ankieta-tytul">
+  <div class="wrap">
+    <div class="ankieta__panel">
+      <div class="ankieta__krawedz" aria-hidden="true"></div>
+      <div class="ankieta__srodek">
+
+        <div>
+          <h2 id="ankieta-tytul">Ankieta</h2>
+          <div class="ankieta__wstep tekst miara">
+            <p>Twoje odpowiedzi pomogą przygotować propozycje zmian na dworcach kolejowych.</p>
+          </div>
+          <p class="ankieta__akcja">
+            <!-- Adres docelowy ankiety: https://ankieta.dworcebezbarier.pl
+                 Po zmianie popraw też adres w akapicie poniżej i w sekcji „Otwarcie”. -->
+            <a class="przycisk" href="https://badanie-dworce-autyzm.github.io/ankieta/?skad=strona&amp;pilot=1">Wypełnij ankietę</a>
+          </p>
+          <p class="ankieta__uwaga miara">Ankieta otworzy się w&nbsp;tej samej karcie, pod adresem <span class="razem">badanie-dworce-autyzm.github.io</span>.</p>
+        </div>
+
+        <dl class="fakty">
+          <div>
+            <dt>Kto może wypełnić</dt>
+            <dd>
+              <ul>
+                <li>osoby w&nbsp;spektrum autyzmu, które mają co najmniej 18&nbsp;lat (diagnoza nie jest wymagana)</li>
+                <li>rodzice i&nbsp;opiekunowie osób w&nbsp;spektrum autyzmu w&nbsp;każdym wieku</li>
+              </ul>
+              <p class="fakty__dopisek">Można ją wypełnić także wtedy, gdy nie korzysta się z&nbsp;kolei.</p>
+            </dd>
+          </div>
+          <div>
+            <dt>Prywatność</dt>
+            <dd>Ankieta jest anonimowa. Nie trzeba się logować ani podawać adresu <span class="razem">e-mail</span>.</dd>
+          </div>
+          <div>
+            <dt>Czas</dt>
+            <dd>Około <span class="razem">10–15&nbsp;minut</span>. Ankieta ma <span class="razem">25–26&nbsp;pytań</span> w&nbsp;7&nbsp;częściach. Można robić przerwy i&nbsp;wrócić do niej później.</dd>
+          </div>
+          <div>
+            <dt>Pytania</dt>
+            <dd>Dotyczą dworców i&nbsp;stacji w&nbsp;całej Polsce, nie tylko Warszawy Zachodniej. Każde pytanie można pominąć.</dd>
+          </div>
+        </dl>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     5. O autorce
+     ====================================================================== -->
+<section class="sekcja sekcja--peron" id="autorka" aria-labelledby="autorka-tytul">
+  <div class="wrap">
+    <h2 id="autorka-tytul">O&nbsp;autorce</h2>
+
+    <div class="autorka__uklad">
+
+      <!-- Zdjęcie: 540×720 px, bez metadanych EXIF -->
+      <img class="zdjecie__foto" src="michalina-chybicka.jpg" width="540" height="720"
+           alt="Michalina Chybicka. Portret: jasna marynarka w&nbsp;pepitkę, ręce skrzyżowane, szare tło.">
+
+      <div>
+        <h3>Michalina Chybicka</h3>
+        <div class="autorka__bio tekst miara">
+          <p>Terapeutka i&nbsp;studentka transportu kolejowego. Na co dzień pracuje z&nbsp;dziećmi w&nbsp;spektrum autyzmu i&nbsp;z&nbsp;osobami z&nbsp;niepełnosprawnościami.</p>
+          <p>Studiuje na Uczelni Techniczno-Handlowej im.&nbsp;Heleny Chodkowskiej w&nbsp;Warszawie, na kierunku transport, w&nbsp;specjalności transport kolejowy.</p>
+          <p>W&nbsp;tym projekcie łączy doświadczenie z&nbsp;pracy terapeutycznej z&nbsp;wiedzą o&nbsp;transporcie kolejowym.</p>
+          <p><span class="todo">[DO UZUPEŁNIENIA: bio autorki, 2–3&nbsp;zdania o&nbsp;doświadczeniu i&nbsp;o&nbsp;tym, skąd ten temat]</span></p>
+        </div>
+        <p class="autorka__akcja">
+          <a class="przycisk przycisk--drugi" href="mailto:michalina.chybicka@uth.pl?subject=Dworce%20bez%20barier">Napisz do autorki</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     6. Dla branży kolejowej
+     ====================================================================== -->
+<section class="sekcja" id="branza" aria-labelledby="branza-tytul">
+  <div class="wrap uklad">
+    <h2 id="branza-tytul">Dla branży kolejowej</h2>
+    <div>
+      <div class="tekst miara">
+        <p>Zapraszamy do kontaktu zarządców stacji, przewoźników i&nbsp;projektantów.</p>
+        <p>Projekt zakończy się mapą barier na wybranej trasie na stacji Warszawa Zachodnia i&nbsp;listą propozycji usprawnień. Chętnie pokażemy wyniki i&nbsp;porozmawiamy o&nbsp;współpracy.</p>
+        <p>Termin wyników: <span class="todo">[DO UZUPEŁNIENIA: termin publikacji wyników]</span></p>
+        <p>Pomóc można już teraz: wystarczy przekazać link do ankiety osobom w&nbsp;spektrum autyzmu, rodzicom i&nbsp;opiekunom.</p>
+      </div>
+      <!-- Adres do przekazania dalej (?skad=polecenie odróżnia go od wejść ze strony).
+           Po podpięciu domeny: https://ankieta.dworcebezbarier.pl/?skad=polecenie -->
+      <p class="kopiuj">
+        <span class="kopiuj__etykieta">Link do ankiety</span>
+        <span class="kopiuj__adres">https://badanie-dworce-autyzm.github.io/ankieta/?skad=polecenie</span>
+      </p>
+      <p class="branza__akcja">
+        <a class="przycisk przycisk--drugi" href="mailto:michalina.chybicka@uth.pl?subject=Dworce%20bez%20barier%20%E2%80%93%20wsp%C3%B3%C5%82praca">Napisz w&nbsp;sprawie współpracy</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     7. Kontakt i prywatność
+     ====================================================================== -->
+<section class="sekcja sekcja--peron" id="kontakt" aria-labelledby="kontakt-tytul">
+  <div class="wrap uklad">
+    <h2 id="kontakt-tytul">Kontakt i&nbsp;prywatność</h2>
+    <div class="tekst miara">
+      <p>Pytania o&nbsp;badanie i&nbsp;ankietę kieruj do autorki:</p>
+      <p class="kontakt__adres"><a href="mailto:michalina.chybicka@uth.pl">michalina.chybicka@uth.pl</a></p>
+      <p>Ta strona nie używa plików cookie ani analityki.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================================================================
+     8. Stopka
+     ====================================================================== -->
+<footer class="stopka">
+  <div class="wrap stopka__uklad">
+    <div>
+      <p class="tablica tablica--jasna">Dworce bez barier</p>
+      <div class="stopka__tekst tekst miara">
+        <p>Projekt jest częścią pracy inżynierskiej „Opracowanie mapy barier i&nbsp;propozycji usprawnień dostępności stacji Warszawa Zachodnia dla osób w&nbsp;spektrum autyzmu”.</p>
+        <p>Uczelnia Techniczno-Handlowa im.&nbsp;Heleny Chodkowskiej w&nbsp;Warszawie, kierunek transport, specjalność transport kolejowy.</p>
+        <!-- Nazwisko promotora jest już podane w ankiecie. Przed publikacją strona idzie do promotora do akceptacji. -->
+        <p>Autorka: Michalina&nbsp;Chybicka. Promotor: dr&nbsp;inż.&nbsp;Przemysław&nbsp;Ilczuk. Rok: <span class="todo">[DO UZUPEŁNIENIA: rok]</span>.</p>
+      </div>
+      <!-- Miejsce na logo uczelni. Tylko po zgodzie UTH: wstaw <img src="logo-uth.svg" alt="Uczelnia Techniczno-Handlowa im. Heleny Chodkowskiej"> -->
+      <p class="stopka__logo"><span class="todo">[DO UZUPEŁNIENIA: logo UTH i&nbsp;informacja o&nbsp;wsparciu, po zgodzie uczelni]</span></p>
+    </div>
+
+    <nav class="stopka__nawigacja" aria-label="Sekcje strony w stopce">
+      <ul>
+        <li><a class="link-wiersz" href="https://badanie-dworce-autyzm.github.io/ankieta/?skad=strona&amp;pilot=1">Wypełnij ankietę</a></li>
+        <li><a class="link-wiersz" href="#cel">Po co jest to badanie</a></li>
+        <li><a class="link-wiersz" href="#badanie">Jak prowadzimy badanie</a></li>
+        <li><a class="link-wiersz" href="#autorka">O&nbsp;autorce</a></li>
+        <li><a class="link-wiersz" href="#branza">Dla branży kolejowej</a></li>
+        <li><a class="link-wiersz" href="#kontakt">Kontakt i&nbsp;prywatność</a></li>
+        <li class="stopka__gora"><a class="link-wiersz" href="#gora">Wróć na górę strony</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
